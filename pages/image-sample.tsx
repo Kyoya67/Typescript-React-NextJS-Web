@@ -9,7 +9,11 @@ const ImageSample: NextPage = () => {
         <div style={{ textAlign: "center", width: "80%", margin: "30px auto" }}>
             <h1>Imageコンポーネントのサンプル</h1>
             <p>
-                <Image src={SampleImage} alt="サンプル画像" layout="intrinsic" />
+                <Image src={SampleImage}
+                    alt="サンプル画像"
+                    layout="intrinsic"
+                    placeholder="blur"
+                />
             </p>
             <h1 style={{ marginTop: "2rem" }}>imgタグのサンプル</h1>
             <p style={{ width: "100%", height: "auto" }}>
