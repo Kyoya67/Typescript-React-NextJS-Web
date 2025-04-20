@@ -1,17 +1,24 @@
 import Link from "next/link";
+import type { NextPage } from "next";
+import styled from "styled-components";
 
-export default function Home() {
+const H1 = styled.h1`
+  color: red;
+  font-size: 5rem;
+`;
+
+const Home: NextPage = () => {
   return (
     <>
-      <div style={{ marginTop: "2rem", display: "flex", gap: "2rem", flexDirection: "column", alignItems: "center" }}>
-        <div>
+      <div style={{ margin: "2rem" }}>
+        <H1>Hello World</H1>
+        <div style={{ marginTop: "2rem" }}>
           <h2>静的ページ</h2>
           <div style={{ display: "flex", gap: "1rem", marginTop: "1rem" }}>
             <Link href="/ssg" style={{
               padding: "0.5rem 1rem",
               backgroundColor: "#6c757d",
               color: "white",
-
               textDecoration: "none"
             }}>
               SSG Page
@@ -20,7 +27,6 @@ export default function Home() {
               padding: "0.5rem 1rem",
               backgroundColor: "#6c757d",
               color: "white",
-
               textDecoration: "none"
             }}>
               SSR Page
@@ -28,7 +34,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div>
+        <div style={{ marginTop: "2rem" }}>
           <h2>動的ルーティング</h2>
           <div style={{ display: "flex", gap: "1rem", marginTop: "1rem" }}>
             <div style={{ display: "flex", gap: "1rem" }}>
@@ -36,7 +42,6 @@ export default function Home() {
                 padding: "0.5rem 1rem",
                 backgroundColor: "#0070f3",
                 color: "white",
-
                 textDecoration: "none"
               }}>
                 SSG Post 1
@@ -45,7 +50,6 @@ export default function Home() {
                 padding: "0.5rem 1rem",
                 backgroundColor: "#0070f3",
                 color: "white",
-
                 textDecoration: "none"
               }}>
                 SSG Post 2
@@ -56,7 +60,6 @@ export default function Home() {
                 padding: "0.5rem 1rem",
                 backgroundColor: "#28a745",
                 color: "white",
-
                 textDecoration: "none"
               }}>
                 SSR Post 1
@@ -65,19 +68,37 @@ export default function Home() {
                 padding: "0.5rem 1rem",
                 backgroundColor: "#28a745",
                 color: "white",
-
                 textDecoration: "none"
               }}>
                 SSR Post 2
               </Link>
-              <Link href="/image-sample" style={{
+            </div>
+          </div>
+        </div>
+
+        <div style={{ marginTop: "2rem" }}>
+          <h2>Image Sample</h2>
+          <div style={{ display: "flex", gap: "1rem", marginTop: "1rem" }}>
+            <Link href="/image-sample" style={{
+              padding: "0.5rem 1rem",
+              backgroundColor: "#6c757d",
+              color: "white",
+              textDecoration: "none"
+            }}>
+              Image Sample
+            </Link>
+          </div>
+
+          <div style={{ marginTop: "2rem" }}>
+            <h2>API</h2>
+            <div style={{ display: "flex", gap: "1rem", marginTop: "1rem" }}>
+              <Link href="/sayHello" style={{
                 padding: "0.5rem 1rem",
                 backgroundColor: "#6c757d",
                 color: "white",
-
                 textDecoration: "none"
               }}>
-                Image Sample
+                Say Hello
               </Link>
             </div>
           </div>
@@ -86,3 +107,5 @@ export default function Home() {
     </>
   )
 }
+
+export default Home;

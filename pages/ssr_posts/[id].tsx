@@ -36,7 +36,6 @@ const Post: NextPage<PostProps> = (props) => {
                         padding: "0.5rem 1rem",
                         backgroundColor: "#6c757d",
                         color: "white",
-
                         textDecoration: "none"
                     }}>
                         ホームに戻る
