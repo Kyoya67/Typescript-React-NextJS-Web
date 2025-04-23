@@ -54,11 +54,19 @@ const Button = styled.button<ButtonProps>`
   gap: 1rem;
 `;
 
+const CircleButton = styled(Button)`
+  border-radius: 50%;
+  padding: 1rem;
+`
+
 const Page: NextPage = () => {
   return (
     <>
       <div style={{ margin: "2rem" }}>
-        <H1>Hello World</H1>
+        <div style={{ display: "flex", gap: "3rem", alignItems: "center" }}>
+          <H1>Hello World</H1>
+          <CircleButton color="white" backgroundColor="gray">CircleButton</CircleButton>
+        </div>
         <div style={{ marginTop: "2rem", display: "flex", gap: "1rem", alignItems: "center" }}>
           <ButtonCssFunc>ButtonCssFunc</ButtonCssFunc>
           <TextCssFunc>TextCssFunc</TextCssFunc>
