@@ -1,6 +1,32 @@
 import Link from "next/link";
 import type { NextPage } from "next";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+
+const redBox = css`
+  padding: 0.25rem 1rem;
+  border: 0.25rem solid red;
+  border-radius: 0.8rem;
+`
+
+const font = css`
+  color: #1e90ff;
+  font-size: 2rem;
+`
+
+const ButtonCssFunc = styled.button`
+  background: transparent;
+  margin: 1rem;
+  cursor: pointer;
+
+  ${redBox}
+  ${font}
+`
+
+const TextCssFunc = styled.p`
+  font-weight: bold;
+
+  ${font}
+`
 
 type ButtonProps = {
   color: string;
@@ -33,6 +59,10 @@ const Page: NextPage = () => {
     <>
       <div style={{ margin: "2rem" }}>
         <H1>Hello World</H1>
+        <div style={{ marginTop: "2rem", display: "flex", gap: "1rem", alignItems: "center" }}>
+          <ButtonCssFunc>ButtonCssFunc</ButtonCssFunc>
+          <TextCssFunc>TextCssFunc</TextCssFunc>
+        </div>
         <div style={{ marginTop: "2rem" }}>
           <h2>静的ページ</h2>
           <ButtonContainer>
